@@ -1,0 +1,23 @@
+<div class="card">
+    <div class="card-image">
+      <figure class="image is-4by3">
+        <img src="<%- game.thumbnail  %> " alt="Placeholder image">
+      </figure>
+    </div>
+    <div class="card-content">
+      <div class="media">
+        <div class="media-content">
+          <p class="title is-4"><%- game.title  %> </p>
+          <p class="subtitle is-6">@<%- game.genre  %> </p>
+        </div>
+      </div>
+  
+      <div class="content">
+        <%- game.short_description.slice(0,85)  %>..
+        <a href="/detail/<%- game.id%> ">Devamını Görüntüle</a>
+        <br>
+        <br>
+        <b><%- game.release_date  %> </b>
+      </div>
+    </div>
+  </div>

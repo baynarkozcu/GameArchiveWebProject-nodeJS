@@ -1,0 +1,56 @@
+<%- include("./partials/header")  %> 
+
+
+<%- include("./partials/carouselSlider", {screenshots : gameDetail.screenshots})%>
+
+<div class="block has-text-centered ">
+  <b class="title"><%- gameDetail.title  %> </b>
+</div>
+
+<div class="block pb-5 ">
+  <div class="container">
+    <%- gameDetail.description  %> 
+  </div>
+</div>
+
+
+<div class="block ">
+  <div class="container">
+    <div>
+      <h2 class="content is-medium " style= "color: rgb(240, 173, 50);">Publisher: &nbsp;&nbsp; <b><%- gameDetail.publisher %></b> </h2> 
+    </div>
+  </div>
+
+  <div class="container">
+    <div>
+      <h2 class="content is-medium " style="color: rgb(233, 49, 49); ">Platform: &nbsp;&nbsp; <b><%- gameDetail.platform %></b> </h2>
+    </div>
+  </div>
+
+  <div class="container">
+    <div>
+      <h2 class="content is-medium" style= "color: rgb(240, 173, 50);">Release Date: &nbsp;&nbsp; <b><%- gameDetail.release_date %></b> </h2>
+    </div>
+  </div>
+
+  <% if (gameDetail.minimum_system_requirements) { %>
+    <div class="container">
+      <div>
+        <p class="content is-medium" style="color: rgb(233, 49, 49); ">Minimum System Requirements:
+        <b><%- gameDetail.minimum_system_requirements.os %></b> & <b><%- gameDetail.minimum_system_requirements.processor %></b> & <b><%- gameDetail.minimum_system_requirements.memory %></b> & <b><%- gameDetail.minimum_system_requirements.memory %></b> & <b><%- gameDetail.minimum_system_requirements.storage %></b>
+      </p>
+      </div>
+    </div>
+  <% } %>
+
+
+</div>
+
+
+
+
+
+
+
+
+<%- include('./partials/footer') %> 

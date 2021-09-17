@@ -1,0 +1,48 @@
+<nav class="pagination is-medium is-centered mt-6 " role="navigation" aria-label="pagination">
+    <ul class="pagination-list">
+
+<% if (page !== 1) { %>
+  <li>
+    <a href= "/home?page=1" class="pagination-link" aria-current="page">1</a>
+  </li>
+
+  <li><span class="pagination-ellipsis">&hellip;</span></li>
+
+
+  <% for( let index = page; index < 10; index++ ) { %>
+
+    <% if (page+10<=count) { %>
+      <li>
+        <a href= '/home?page=<%- parseInt( index) %> ' class="pagination-link is-current" aria-current="page"><%-  parseInt( index)  %> </a>
+      </li>
+    <% }else {%>
+      
+      <li>
+        <a href= '/home?page=<%- parseInt( count -10) %> ' class="pagination-link is-current" aria-current="page"><%-  parseInt( count -10)  %> </a>
+      </li>
+      <% } %> 
+
+
+
+  
+  <% } %>
+
+  <li><span class="pagination-ellipsis">&hellip;</span></li>
+
+  <li>
+    <a href= "/home?page=<%-count %> " class="pagination-link is-current" aria-current="page"><%- count %>  </a>
+  </li>
+
+
+
+<% } %>
+
+
+
+
+
+ 
+    </ul>
+  </nav>
+
+

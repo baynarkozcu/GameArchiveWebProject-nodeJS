@@ -1,0 +1,21 @@
+<section class="section">
+  <div class="container is-clipped ">
+    <div id="slider">
+
+<% screenshots.forEach(screenshot => { %>
+  <div class="card 	">
+    <div class="card-image">
+      <figure class="image is-16by9 ">
+        <img
+          src="<%- screenshot.image                                                               %> "
+          alt=""
+        />
+      </figure>
+    </div>
+  </div>
+<% }) %>
+
+    
+    </div>
+  </div>
+</section>
