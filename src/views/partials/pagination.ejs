@@ -9,35 +9,63 @@
   <li><span class="pagination-ellipsis">&hellip;</span></li>
 
 
-  <% for( let index = page; index < 10; index++ ) { %>
+  <% if (page < 16) { %>
+    <% for( let index = page; index < page+10; index++ ) { %>
+      <% if (page === index) { %>
+        <li>
+          <a href= "/home?page=<%= index %>" class="pagination-link is-current" aria-current="page"><%= index  %> </a>
+        </li>
+      <% } else { %>
+        <li>
+          <a href= "/home?page=<%= index %>" class="pagination-link" aria-current="page"><%= index%> </a>
+        </li>
+        <% } %> 
+    <% } %>
+  
+    <li><span class="pagination-ellipsis">&hellip;</span></li>
+  
+    <li>
+      <a href= "/home?page=<%-count %> " class="pagination-link " aria-current="page"><%- count %>  </a>
+    </li>
+  <% }else { %>
+    <% for( let index = 16; index < count+1; index++ ) { %>
+      <% if (page === index) { %>
+        <li>
+          <a href= "/home?page=<%= index  %>" class="pagination-link is-current" aria-current="page"><%= index  %> </a>
+        </li>
+      <% } else { %>
+        <li>
+          <a href= "/home?page=<%= index %>" class="pagination-link" aria-current="page"><%= index%> </a>
+        </li>
+        <% } %> 
+    <% } %>
+    <% } %> 
 
-    <% if (page+10<=count) { %>
-      <li>
-        <a href= '/home?page=<%- parseInt( index) %> ' class="pagination-link is-current" aria-current="page"><%-  parseInt( index)  %> </a>
-      </li>
-    <% }else {%>
-      
-      <li>
-        <a href= '/home?page=<%- parseInt( count -10) %> ' class="pagination-link is-current" aria-current="page"><%-  parseInt( count -10)  %> </a>
-      </li>
-      <% } %> 
 
 
 
+
+
+  <!-- Eger Index 1 ise Başarılı Çalışacaktır -->
+<% } else { %>
+
+  <% for( let index = 1; index < 11; index++ ) { %>
+
+    <li>
+      <% if (index===page) { %>
+        <a href= '/home?page=<%- index %> ' class="pagination-link is-current" aria-current="page"><%-  index  %> </a>
+      <% } else {%>
+        <a href= '/home?page=<%- index %> ' class="pagination-link" aria-current="page"><%-index %> </a>
+        <% } %> 
+    </li>
   
   <% } %>
 
   <li><span class="pagination-ellipsis">&hellip;</span></li>
-
   <li>
-    <a href= "/home?page=<%-count %> " class="pagination-link is-current" aria-current="page"><%- count %>  </a>
+    <a href= '/home?page=<%- parseInt(count) %> ' class="pagination-link " aria-current="page"><%-  parseInt(count)  %> </a>
   </li>
-
-
-
-<% } %>
-
-
+<% } %> 
 
 
 

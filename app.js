@@ -16,12 +16,14 @@ app.use(expressLayout);
 app.set('view engine', 'ejs');
 app.set('views', path.resolve(__dirname, './src/views'));
 
+
+
 app.use('/', homeRouter);
 app.use('/home', homeRouter);
 app.use('/detail', detailRouter);
 
 
-app.listen('8000', ()=>{
+app.listen('8001', ()=>{
     console.log("8000 Portu Başlatıldı.");
 })
 
