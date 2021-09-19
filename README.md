@@ -1,6 +1,6 @@
 # GameArchive-nodeJS
 
-<b>NodeJS & EJS </b> Kullanılarak Oluşturulmuş Basit Bir Backend-Frontend Çalışmasıdır. Hazır Public bir API Kaynağından Axios Packages Yardımı ile Game Datalarını Çekip, Pagination ile Gelen 100 lerce Data Sayfalara Bölünmüştür. SearchBar ise Oyun Türüne Göre Aramalar Yapılabilecek Şekilde Tasarlanmıştır. Tüm Bu Yapılar  <b> Bulma CSS </b> Yardımıyla Güzel Bir Arayüz Halinde Sunulmuştur.
+<b>NodeJS & EJS </b> Kullanılarak Oluşturulmuş Basit Bir Backend-Frontend Çalışmasıdır. Hazır Public bir API Kaynağından Axios Packages Yardımı ile Game Datalarını Çekip, Pagination ile Gelen 100 lerce Data Sayfalara Bölünmüştür. SearchBar ise Oyun Türüne Göre Aramalar Yapılabilecek Şekilde Tasarlanmıştır. Son Olarak Oyunların Detaylarının İncelenebileceği Detay Sayfası Eklenmiştir. Tüm Bu Yapılar  <b> Bulma CSS </b> Yardımıyla Güzel Bir Arayüz Halinde Sunulmuştur.
 
 ### Used Packages & Source API & CSS Framework :
 
@@ -42,8 +42,17 @@ npm start
 http://localhost:3000
 ```
 
+<br>
+
+![screencapture-localhost-3000-2021-09-19-13_46_24](https://user-images.githubusercontent.com/61154446/133925605-460c043a-ebd4-46c9-be3b-d1dfaff9a4f3.png)
+
+
+#### <li> Oyun Detaylarını İncelemek Oyun Card ları Üzerinden {Devamını Görüntüle} Butonuna Tıklayın</li>
 
 <br>
+
+![screencapture-localhost-3000-detail-1-2021-09-19-14_26_11](https://user-images.githubusercontent.com/61154446/133925819-77e21ae2-522f-4bc5-a39b-ac19c97fba78.png)
+
 
 
 <div align="center"> <b> Thanks for Visiting My Project ツ </b> </div>
