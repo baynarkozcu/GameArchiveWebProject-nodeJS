@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express');
 const app = express();
 const path = require('path');
@@ -23,7 +24,7 @@ app.use('/home', homeRouter);
 app.use('/detail', detailRouter);
 
 
-app.listen('8001', ()=>{
-    console.log("8000 Portu Başlatıldı.");
-})
+app.listen(process.env.PORT || '8000', ()=>{
+    console.log(`${process.env.PORT} Port Listening...`);
+});
 

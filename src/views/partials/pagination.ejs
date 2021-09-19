@@ -10,7 +10,8 @@
 
 
   <% if (page < 16) { %>
-    <% for( let index = page; index < page+10; index++ ) { %>
+    <!--  TODO : Search Yaparken Pagination da Hata Oluştu. && Yönlendirme Yerine POST İsteği ve Query Yollanacak. -->
+    <% for( let index = page; index < (page+10 > count ? count : page+10); index++ ) { %>
       <% if (page === index) { %>
         <li>
           <a href= "/home?page=<%= index %>" class="pagination-link is-current" aria-current="page"><%= index  %> </a>
@@ -49,7 +50,7 @@
   <!-- Eger Index 1 ise Başarılı Çalışacaktır -->
 <% } else { %>
 
-  <% for( let index = 1; index < 11; index++ ) { %>
+  <% for( let index = 1; index < (count > 11 ? 11 : count); index++ ) { %>
 
     <li>
       <% if (index===page) { %>
