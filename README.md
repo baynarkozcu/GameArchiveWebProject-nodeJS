@@ -14,7 +14,7 @@
 
 <br>
 
-#### Projeyi İncelemeniz İçin Heroku ya Deploy Edilmiştir. İncelemek için  <a href="https://gagmearchive-nodejs.herokuapp.com/">Tıklayınız.</a> 
+#### Projeyi İncelemeniz İçin Heroku ya Deploy Edilmiştir. İncelemek için  <a href="https://gamearchive-nodejs.herokuapp.com/">Tıklayınız.</a> 
 
 <br>
 
